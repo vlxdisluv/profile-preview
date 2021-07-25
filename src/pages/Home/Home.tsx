@@ -27,10 +27,8 @@ export const Home = () => {
 
         <Link
           variant="primary"
-          label="Music"
-          onClick={() =>
-            window.open('https://songwhip.com/vlxdiluv/%E7%AB%8B%E3%81%A3%E3%81%A6%E6%AD%A9%E3%81%91%E3%82%88', '_self')
-          }
+          label="Anime BEAT - 立 っ て 歩 け よ"
+          onClick={() => window.open('https://li.sten.to/wIMUZIo', '_self')}
         />
       </View>
     </Root>
@@ -42,7 +40,7 @@ const UserName = styled.div`
   font-family: Roboto, sans-serif;
   font-weight: bold;
 
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 `;
 
 const Link = styled(Button)`

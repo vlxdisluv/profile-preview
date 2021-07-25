@@ -1,0 +1,12 @@
+export { default as RobotoBlackTTF } from './Roboto-Black.ttf';
+export { default as RobotoBlackItalicTTF } from './Roboto-BlackItalic.ttf';
+export { default as RobotoBoldTTF } from './Roboto-Bold.ttf';
+export { default as RobotoBoldItalicTTF } from './Roboto-BoldItalic.ttf';
+export { default as RobotoItalicTTF } from './Roboto-Italic.ttf';
+export { default as RobotoLightTTF } from './Roboto-Light.ttf';
+export { default as RobotoLightItalicTTF } from './Roboto-LightItalic.ttf';
+export { default as RobotoMediumTTF } from './Roboto-Medium.ttf';
+export { default as RobotoMediumItalicTTF } from './Roboto-MediumItalic.ttf';
+export { default as RobotoRegularTTF } from './Roboto-Regular.ttf';
+export { default as RobotoThinTTF } from './Roboto-Thin.ttf';
+export { default as RobotoThinItalicTTF } from './Roboto-ThinItalic.ttf';

@@ -44,7 +44,7 @@ interface RootProps extends Omit<ButtonProps, 'disabled' | 'loading' | 'label' |
 const Root = styled.button<RootProps>`
   min-height: 54px;
   border: 0;
-  border-radius: 16px;
+
   padding: 17px;
   min-width: 100px;
   transition: 0.3s;
@@ -86,7 +86,7 @@ const Root = styled.button<RootProps>`
         if ($disabled) {
           return colors.color4;
         } else {
-          return colors.color7;
+          return colors.color0;
         }
       case 'secondary':
         return colors.color5;

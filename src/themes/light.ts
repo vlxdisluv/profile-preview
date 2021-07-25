@@ -18,19 +18,19 @@ export const lightTheme = {
   },
   typography: {
     title1: `
-      font-family: 'Poppins', sans-serif;
+      font-family: Roboto, sans-serif;
       font-weight: 700;
       font-size: 48px;
       line-height: 60px;
     `,
     subhead1: `
-      font-family: 'Poppins', sans-serif;
+      font-family: Roboto, sans-serif;
       font-weight: 500;
       font-size: 15px;
       line-height: 18px;
     `,
     subhead2: `
-      font-family: 'Poppins', sans-serif;
+      font-family: Roboto, sans-serif;
       font-weight: 300;
       font-style: normal;
       font-size: 15px;

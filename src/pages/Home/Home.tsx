@@ -9,9 +9,11 @@ export const Home = () => {
   return (
     <Root>
       <View>
+        <UserName>vlxdisluv</UserName>
         <Avatar src={avatarPic} />
 
         <Text>Welcome my dear friend 🖤😼</Text>
+
         <Link
           variant="primary"
           label="Instagram"
@@ -34,6 +36,14 @@ export const Home = () => {
     </Root>
   );
 };
+
+const UserName = styled.div`
+  color: ${({ theme: { colors } }) => colors.color1};
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+
+  margin-bottom: 5px;
+`;
 
 const Link = styled(Button)`
   margin: 0 10px 10px 10px;

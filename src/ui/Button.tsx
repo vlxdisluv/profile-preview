@@ -86,7 +86,7 @@ const Root = styled.button<RootProps>`
         if ($disabled) {
           return colors.color4;
         } else {
-          return colors.color0;
+          return colors.color6;
         }
       case 'secondary':
         return colors.color5;

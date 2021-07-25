@@ -7,6 +7,7 @@ export const lightTheme = {
     color3: '#C0C0C0',
     color4: '#E2E2EA',
     color5: '#F4F6F8',
+    color6: '#222c46',
     color7: '#31CACA',
     color8: '#FFC542',
     color9: '#FF974A',

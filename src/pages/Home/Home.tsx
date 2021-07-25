@@ -11,7 +11,7 @@ export const Home = () => {
       <View>
         <Avatar src={avatarPic} />
 
-        <Text>Welcome my dear friend 🖤</Text>
+        <Text>Welcome my dear friend 🖤😼</Text>
         <Link
           variant="primary"
           label="Instagram"
@@ -37,16 +37,18 @@ export const Home = () => {
 
 const Link = styled(Button)`
   margin: 0 10px 10px 10px;
+  border-radius: 4px;
 `;
 
 const Text = styled.div`
   font-family: Roboto, sans-serif;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #6085ab;
-  background-color: #fee2e3;
+  color: ${({ theme: { colors } }) => colors.color6};
+  background-color: ${({ theme: { colors } }) => colors.color8};
   padding: 10px 15px;
   align-self: center;
+  border-radius: 4px;
 `;
 
 const Root = styled.main`
@@ -65,7 +67,6 @@ const Root = styled.main`
 const View = styled.div`
   max-width: 1024px;
   width: 100%;
-  height: 100vh;
   margin-left: auto;
   margin-right: auto;
 
@@ -77,7 +78,7 @@ const View = styled.div`
   align-items: stretch;
   text-align: center;
 
-  padding: 20px 0;
+  padding-top: 20px;
 `;
 
 const Avatar = styled.img`

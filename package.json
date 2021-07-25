@@ -1,0 +1,134 @@
+{
+  "homepage": "http://vlxdisluv.github.io/profile-preview",
+  "name": "profile-preview",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "normalize.css": "^8.0.1",
+    "poppins-font": "^1.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.4.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.2.3",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint:css": "stylelint './src/**/*.tsx'",
+    "lint:tsx": "eslint ./src --ext .ts,.tsx",
+    "lint:tsx:fix": "eslint --fix ./src --ext ts,.tsx",
+    "prettier": "prettier \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "prettier:fix": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "prepare": "husky install",
+    "svg:transform": "./node_modules/@svgr/cli/bin/svgr --ignore-existing --typescript -d src/assets/svg src/assets/svg",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "commit": "cz"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "unused-imports"
+    ],
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "max-len": [
+        0,
+        120,
+        2
+      ],
+      "no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "error"
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "styled-components": "^5",
+    "babel-loader": "8.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/node-logger": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.9",
+    "@svgr/cli": "^5.5.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/parser": "^4.22.0",
+    "babel-plugin-styled-components": "^1.12.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-unused-imports": "^1.1.1",
+    "gh-pages": "^3.2.3",
+    "husky": "^6.0.0",
+    "import-sort": "^6.0.0",
+    "import-sort-style-eslint": "^6.0.0",
+    "import-sort-style-module": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "prettier-plugin-import-sort": "^0.0.6",
+    "storybook-addon-styled-component-theme": "^2.0.0",
+    "stylelint": "^13.13.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^4.1.0",
+    "stylelint-processor-styled-components": "^1.10.0"
+  },
+  "importSort": {
+    ".ts, .tsx": {
+      "style": "module",
+      "parser": "typescript"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

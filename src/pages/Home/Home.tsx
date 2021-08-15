@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import avatarPic from '../../assets/img/GrtbVv47Y4c.jpeg';
-import japanPic from '../../assets/img/japan.jpg';
+import narutoMakiPic from '../../assets/img/naruto-maki.jpeg';
 import Button from '../../ui/Button';
 
 export const Home = () => {
@@ -16,6 +16,11 @@ export const Home = () => {
 
         <Link
           variant="primary"
+          label="Donate PayPal"
+          onClick={() => window.open('https://www.paypal.com/paypalme/vlxdisluv', '_self')}
+        />
+        <Link
+          variant="primary"
           label="Instagram"
           onClick={() => window.open('https://www.instagram.com/vlxdisluv', '_self')}
         />
@@ -27,7 +32,7 @@ export const Home = () => {
 
         <Link
           variant="primary"
-          label="Anime BEAT - 立 っ て 歩 け よ"
+          label="VLXDI$LUV x kurosuki - 立 っ て 歩 け よ"
           onClick={() => window.open('https://li.sten.to/wIMUZIo', '_self')}
         />
       </View>
@@ -36,7 +41,7 @@ export const Home = () => {
 };
 
 const UserName = styled.div`
-  color: ${({ theme: { colors } }) => colors.color1};
+  color: ${({ theme: { colors } }) => colors.color6};
   font-family: Roboto, sans-serif;
   font-weight: bold;
 
@@ -65,11 +70,7 @@ const Root = styled.main`
   height: 100vh;
   margin-right: auto;
   margin-left: auto;
-  background-image: url(${japanPic});
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: url(${narutoMakiPic}) top left repeat;
 `;
 
 const View = styled.div`
@@ -99,9 +100,6 @@ const Avatar = styled.img`
   margin-right: auto;
   margin-bottom: 20px;
   transition: 0.3s;
-  &:hover {
-    opacity: 0.7;
-  }
 `;
 
 export default Home;

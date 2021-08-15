@@ -1,6 +1,10 @@
-# React WEB Example
+# Profile preview page
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Host
+
+[Website url placed](https://vlxdisluv.github.io/profile-preview/)
 
 ### Dev packages
 

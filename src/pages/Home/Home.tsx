@@ -4,16 +4,30 @@ import styled from 'styled-components';
 import avatarPic from '../../assets/img/GrtbVv47Y4c.jpeg';
 import narutoMakiPic from '../../assets/img/naruto-maki.jpeg';
 import Button from '../../ui/Button';
+import CopyIcon from '../../ui/icons/CopyIcon';
 
 export const Home = () => {
   return (
     <Root>
       <View>
-        <UserName>vlxdisluv</UserName>
+        {/* <UserName>vlxdisluv</UserName> */}
         <Avatar src={avatarPic} />
 
         <Text>Welcome my dear friend 🖤😼</Text>
 
+        <SubText>
+          На корм коту ^^ - 4279 3806 2397 2884{' '}
+          <WrapCopyIcon onClick={() => navigator.clipboard.writeText('4279 3806 2397 2884')}>
+            <CopyIcon />
+          </WrapCopyIcon>
+        </SubText>
+
+        {/* <Link
+          disabled
+          variant="primary"
+          label="На корм коту - 4279 3806 2397 2884"
+          onClick={() => navigator.clipboard.writeText('4279 3806 2397 2884')}
+        /> */}
         <Link
           variant="primary"
           label="Donate PayPal"
@@ -51,6 +65,36 @@ const UserName = styled.div`
 const Link = styled(Button)`
   margin: 0 10px 10px 10px;
   border-radius: 4px;
+`;
+
+const WrapCopyIcon = styled.div`
+  width: 16px;
+  height: 16px;
+  padding: 8px 8px 10px 8px;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+`;
+
+const SubText = styled.div`
+  align-self: stretch;
+  margin: 0 10px 10px 10px;
+  border-radius: 4px;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  color: ${({ theme: { colors } }) => colors.color1};
+
+  cursor: default;
+
+  min-height: 54px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  background-color: ${({ theme: { colors } }) => colors.color15};
+  border: 1px solid ${({ theme: { colors } }) => colors.color1};
 `;
 
 const Text = styled.div`

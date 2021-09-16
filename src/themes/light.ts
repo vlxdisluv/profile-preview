@@ -16,6 +16,7 @@ export const lightTheme = {
     color12: '#F33535',
     color13: '#061B3C',
     color14: '#F3F5FC',
+    color15: '#ffb9c4',
   },
   typography: {
     title1: `

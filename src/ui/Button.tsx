@@ -52,7 +52,7 @@ const Root = styled.button<RootProps>`
     ${variant === 'primary' ? theme.typography.subhead1 : theme.typography.subhead2}
     ${disabled &&
     css`
-      opacity: 0.7;
+      opacity: 1;
     `}
   `};
   cursor: ${({ $loading, $disabled }) => {
@@ -84,7 +84,7 @@ const Root = styled.button<RootProps>`
     switch (variant) {
       case 'primary':
         if ($disabled) {
-          return colors.color4;
+          return colors.color8;
         } else {
           return colors.color6;
         }

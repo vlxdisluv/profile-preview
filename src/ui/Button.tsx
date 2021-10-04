@@ -4,7 +4,14 @@ import styled, { css } from 'styled-components';
 import defaultTheme from '../themes';
 import Loader from './Loader';
 
-const Button: React.FC<ButtonProps> = ({ label, type = 'button', disabled = false, loading = false, ...props }) => {
+const Button: React.FC<ButtonProps> = ({
+  imageUrl,
+  label,
+  type = 'button',
+  disabled = false,
+  loading = false,
+  ...props
+}) => {
   let _loading = loading;
 
   if (disabled) {
@@ -13,6 +20,7 @@ const Button: React.FC<ButtonProps> = ({ label, type = 'button', disabled = fals
 
   return (
     <Root disabled={disabled || loading} $disabled={disabled} $loading={_loading} type={type} {...props}>
+      {!!imageUrl && <Img src={imageUrl} />}
       {_loading ? (
         <Loader color={props.variant === 'primary' ? defaultTheme.colors.color1 : defaultTheme.colors.color2} />
       ) : (
@@ -23,6 +31,7 @@ const Button: React.FC<ButtonProps> = ({ label, type = 'button', disabled = fals
 };
 
 export interface ButtonProps {
+  imageUrl?: string;
   variant: ButtonVariant;
   label: string;
   type?: ButtonType;
@@ -41,9 +50,18 @@ interface RootProps extends Omit<ButtonProps, 'disabled' | 'loading' | 'label' |
   $disabled: boolean;
 }
 
+const Img = styled.img`
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+`;
+
 const Root = styled.button<RootProps>`
   min-height: 54px;
   border: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 
   padding: 17px;
   min-width: 100px;
@@ -94,7 +112,7 @@ const Root = styled.button<RootProps>`
         return colors.color4;
     }
   }};
-  &:hover {
+  &:active {
     ${({ variant, $disabled, $loading }) =>
       variant === 'primary' &&
       !$disabled &&

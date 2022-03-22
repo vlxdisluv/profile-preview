@@ -36,27 +36,35 @@ export const Home = () => {
           onClick={() => navigator.clipboard.writeText('4279 3806 2397 2884')}
         /> */}
 
-        <Link
+        {/* <Link
           variant="primary"
           label="Instagram"
           onClick={() => window.open('https://www.instagram.com/vlxdisluv', '_self')}
-        />
+        /> */}
         <Link
           variant="primary"
           label="YouTube"
+          imageUrl="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg"
           onClick={() => window.open('https://youtube.com/channel/UC5GwZwBwbnazGNAjbOfoX5g', '_self')}
         />
         <Link
           variant="primary"
           label="PayPal"
+          imageUrl="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/paypal.svg"
           onClick={() => window.open('https://www.paypal.com/paypalme/vlxdisluv', '_self')}
         />
-        <SubText>
+        <Link
+          variant="primary"
+          label="Telegram"
+          imageUrl="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/telegram.svg"
+          onClick={() => window.open('https://telegram.me/vlxdisluv', '_self')}
+        />
+        {/* <SubText>
           4279 3806 2397 2884
           <WrapCopyIcon onClick={() => navigator.clipboard.writeText('4279 3806 2397 2884')}>
             <CopyIcon />
           </WrapCopyIcon>
-        </SubText>
+        </SubText>*/}
       </View>
     </Root>
   );

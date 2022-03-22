@@ -6,6 +6,7 @@ import Loader from './Loader';
 
 const Button: React.FC<ButtonProps> = ({
   imageUrl,
+  imageStyle,
   label,
   type = 'button',
   disabled = false,
@@ -20,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <Root disabled={disabled || loading} $disabled={disabled} $loading={_loading} type={type} {...props}>
-      {!!imageUrl && <Img src={imageUrl} />}
+      {!!imageUrl && <Img src={imageUrl} style={imageStyle} />}
       {_loading ? (
         <Loader color={props.variant === 'primary' ? defaultTheme.colors.color1 : defaultTheme.colors.color2} />
       ) : (
@@ -32,6 +33,7 @@ const Button: React.FC<ButtonProps> = ({
 
 export interface ButtonProps {
   imageUrl?: string;
+  imageStyle?: React.CSSProperties;
   variant: ButtonVariant;
   label: string;
   type?: ButtonType;
@@ -54,6 +56,7 @@ const Img = styled.img`
   width: 40px;
   height: 40px;
   margin-right: 15px;
+  color: red;
 `;
 
 const Root = styled.button<RootProps>`
